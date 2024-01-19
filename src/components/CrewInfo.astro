@@ -1,0 +1,171 @@
+---
+import douglasPhoto from "@images/crew/image-douglas-hurley.webp";
+import markPhoto from "@images/crew/image-mark-shuttleworth.webp";
+import victorPhoto from "@images/crew/image-victor-glover.webp";
+import anoushehPhoto from "@images/crew/image-anousheh-ansari.webp";
+import { Image } from "astro:assets";
+---
+
+<div
+  class="mt-8 md:mt-16 lg:mt-0 flex flex-col gap-8 md:gap-10 lg:gap-0 lg:flex-row"
+>
+  <div
+    class="px-20 md:px-0 border-b-[#979797] border-b-[1px] md:border-none md:order-2 lg:ml-auto"
+  >
+    <Image
+      data-image="1"
+      class="md:w-[400px] lg:w-[500px] mx-auto"
+      src={douglasPhoto}
+      alt="Douglas's photo"
+    />
+    <Image
+      data-image="2"
+      class="hidden md:w-[400px] lg:w-[500px] mx-auto"
+      src={markPhoto}
+      alt="Douglas's photo"
+    />
+    <Image
+      data-image="3"
+      class="hidden md:w-[400px] lg:w-[500px] mx-auto"
+      src={victorPhoto}
+      alt="Douglas's photo"
+    />
+    <Image
+      data-image="4"
+      class="hidden md:w-[400px] lg:w-[500px] mx-auto"
+      src={anoushehPhoto}
+      alt="Douglas's photo"
+    />
+  </div>
+  <div
+    class="flex flex-col items-center lg:items-start gap-8 md:gap-10 lg:gap-32 self-center lg:mt-20"
+  >
+    <div class="crew_options flex justify-center gap-4 lg:gap-6 md:order-2">
+      <span
+        class="active_crew w-[10px] h-[10px] lg:w-[15px] lg:h-[15px] rounded-full grid place-items-center cursor-pointer"
+        tabindex="0"
+        data-option="1"></span><span
+        class="w-[10px] h-[10px] lg:w-[15px] lg:h-[15px] rounded-full grid place-items-center cursor-pointer"
+        tabindex="0"
+        data-option="2"></span><span
+        class="w-[10px] h-[10px] lg:w-[15px] lg:h-[15px] rounded-full grid place-items-center cursor-pointer"
+        tabindex="0"
+        data-option="3"></span><span
+        class="w-[10px] h-[10px] lg:w-[15px] lg:h-[15px] rounded-full grid place-items-center cursor-pointer"
+        tabindex="0"
+        data-option="4"></span>
+    </div>
+    <div>
+      <div data-item="1" class="text-center lg:text-left">
+        <span
+          class="font-bellefair text-[#919398] uppercase leading-none text-base md:text-2xl lg:text-[2rem]"
+          >Commander</span
+        >
+        <h2
+          class="font-bellefair uppercase leading-none text-2xl md:text-[40px] lg:text-[56px] mt-2 md:mt-4"
+        >
+          Douglas Hurley
+        </h2>
+        <p
+          class="font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 mt-4 md:mt-6 md:max-w-[458px] lg:max-w-[444px]"
+        >
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </p>
+      </div>
+      <div data-item="2" class="hidden text-center lg:text-left">
+        <span
+          class="font-bellefair text-[#919398] uppercase leading-none text-base md:text-2xl lg:text-[2rem]"
+          >Mission Specialist</span
+        >
+        <h2
+          class="font-bellefair uppercase leading-none text-2xl md:text-[40px] lg:text-[56px] mt-2 md:mt-4"
+        >
+          Mark Shuttleworth
+        </h2>
+        <p
+          class="font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 mt-4 md:mt-6 md:max-w-[458px] lg:max-w-[444px]"
+        >
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+          company behind the Linux-based Ubuntu operating system. Shuttleworth
+          became the first South African to travel to space as a space tourist.
+        </p>
+      </div>
+      <div data-item="3" class="hidden text-center lg:text-left">
+        <span
+          class="font-bellefair text-[#919398] uppercase leading-none text-base md:text-2xl lg:text-[2rem]"
+          >Pilot</span
+        >
+        <h2
+          class="font-bellefair uppercase leading-none text-2xl md:text-[40px] lg:text-[56px] mt-2 md:mt-4"
+        >
+          Victor Glover
+        </h2>
+        <p
+          class="font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 mt-4 md:mt-6 md:max-w-[458px] lg:max-w-[444px]"
+        >
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the
+          International Space Station. Glover is a commander in the U.S. Navy
+          where he pilots an F/A-18.He was a crew member of Expedition 64, and
+          served as a station systems flight engineer.
+        </p>
+      </div>
+      <div data-item="4" class="hidden text-center lg:text-left">
+        <span
+          class="font-bellefair text-[#919398] uppercase leading-none text-base md:text-2xl lg:text-[2rem]"
+          >Flight Engineer</span
+        >
+        <h2
+          class="font-bellefair uppercase leading-none text-2xl md:text-[40px] lg:text-[56px] mt-2 md:mt-4"
+        >
+          Anousheh Ansari
+        </h2>
+        <p
+          class="font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 mt-4 md:mt-6 md:max-w-[458px] lg:max-w-[444px]"
+        >
+          Anousheh Ansari is an Iranian American engineer and co-founder of
+          Prodea Systems. Ansari was the fourth self-funded space tourist, the
+          first self-funded woman to fly to the ISS, and the first Iranian in
+          space.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const options = document.querySelectorAll(".crew_options > span");
+  const images = document.querySelectorAll("[data-image]");
+  const dataItems = document.querySelectorAll("[data-item]");
+
+  options.forEach((option) => {
+    option.addEventListener("click", changeCrew);
+    option.addEventListener("keydown", (e) => {
+      // @ts-ignore
+      if (e.key == "Enter") {
+        changeCrew(e);
+      }
+    });
+  });
+
+  function changeCrew(e: Event) {
+    // @ts-ignore
+    const selectedCrew = e.target.getAttribute("data-option");
+
+    options.forEach((option) => option.classList.remove("active_crew"));
+    images.forEach((image) => image.classList.add("hidden"));
+    dataItems.forEach((dataItem) => dataItem.classList.add("hidden"));
+
+    document
+      .querySelector(`[data-image='${selectedCrew}']`)
+      ?.classList.remove("hidden");
+    document
+      .querySelector(`[data-item='${selectedCrew}']`)
+      ?.classList.remove("hidden");
+
+    document
+      .querySelector(`[data-option='${selectedCrew}']`)
+      ?.classList.add("active_crew");
+  }
+</script>

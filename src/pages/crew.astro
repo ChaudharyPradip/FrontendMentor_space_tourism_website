@@ -1,0 +1,22 @@
+---
+import CrewInfo from "@components/CrewInfo.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <div
+    class="background-img"
+    slot="background"
+    style={`--bg-image-desktop: url("/images/crew/background-crew-desktop.jpg");--bg-image-tablet: url("/images/crew/background-crew-tablet.jpg");--bg-image-mobile: url("/images/crew/background-crew-mobile.jpg")`}
+  >
+  </div>
+
+  <div class="px-6 md:px-10 lg:px-40 py-2 md:pt-12 md:pb-0 lg:pt-16">
+    <h1
+      class="text-center uppercase leading-none tracking-[2.7px] md:text-xl md:tracking-[3.375px] lg:text-[28px] lg:tracking-[4.725px] before:content-['02'] before:mr-4 before:opacity-25 before:font-bold md:text-left"
+    >
+      meet your crew
+    </h1>
+    <CrewInfo />
+  </div>
+</PageLayout>

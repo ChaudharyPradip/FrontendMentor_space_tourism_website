@@ -1,0 +1,22 @@
+---
+import TechnologyInfo from "@components/TechnologyInfo.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+---
+
+<PageLayout>
+  <div
+    class="background-img"
+    slot="background"
+    style={`--bg-image-desktop: url("/images/technology/background-technology-desktop.jpg");--bg-image-tablet: url("/images/technology/background-technology-tablet.jpg");--bg-image-mobile: url("/images/technology/background-technology-mobile.jpg")`}
+  >
+  </div>
+
+  <div class="py-2 md:py-12 lg:pt-16">
+    <h1
+      class="px-6 md:px-10 lg:px-40 text-center uppercase leading-none tracking-[2.7px] md:text-xl md:tracking-[3.375px] lg:text-[28px] lg:tracking-[4.725px] before:content-['03'] before:mr-4 before:opacity-25 before:font-bold md:text-left"
+    >
+      space launch 101
+    </h1>
+    <TechnologyInfo />
+  </div>
+</PageLayout>

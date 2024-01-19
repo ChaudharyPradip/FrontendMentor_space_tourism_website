@@ -1,0 +1,24 @@
+---
+import "@fontsource/bellefair";
+import "@fontsource/barlow-condensed/400.css";
+import "@fontsource/barlow-condensed/700.css";
+import "@fontsource/barlow";
+import "../globals.css";
+import Header from "@components/Header.astro";
+import Favicon from "@images/shared/favicon.svg";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href={Favicon.src} type="image/x-icon" />
+  </head>
+  <body>
+    <slot name="background" />
+    <Header />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

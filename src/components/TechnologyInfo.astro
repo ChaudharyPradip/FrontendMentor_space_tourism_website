@@ -1,0 +1,168 @@
+---
+import { Image } from "astro:assets";
+import vehicleImageLandscape from "@images/technology/image-launch-vehicle-landscape.jpg";
+import vehicleImagePortrait from "@images/technology/image-launch-vehicle-portrait.jpg";
+import spaceportImageLandscape from "@images/technology/image-spaceport-landscape.jpg";
+import spaceportImagePortrait from "@images/technology/image-spaceport-portrait.jpg";
+import spacecapsuleImageLandscape from "@images/technology/image-space-capsule-landscape.jpg";
+import spacecapsuleImagePortrait from "@images/technology/image-space-capsule-portrait.jpg";
+---
+
+<div
+  class="py-8 md:py-16 lg:pt-6 flex flex-col items-center gap-8 md:gap-14 lg:gap-32 lg:flex-row lg:pl-40"
+>
+  <div class="lg:hidden">
+    <Image
+      data-image="1"
+      src={vehicleImageLandscape}
+      alt="launch vehicle image"
+    />
+    <Image
+      data-image="2"
+      class="hidden"
+      src={spaceportImageLandscape}
+      alt="spaceport image"
+    />
+    <Image
+      data-image="3"
+      class="hidden"
+      src={spacecapsuleImageLandscape}
+      alt="space capsule image"
+    />
+  </div>
+  <div
+    class="flex flex-col items-center gap-7 md:gap-11 lg:gap-20 lg:flex-row px-6"
+  >
+    <div class="technology_options flex gap-4 lg:flex-col lg:gap-8">
+      <span
+        class="active_technology w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full grid place-items-center cursor-pointer"
+        tabindex="0"
+        data-option="1">1</span
+      ><span
+        class="w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full grid place-items-center cursor-pointer"
+        tabindex="0"
+        data-option="2">2</span
+      ><span
+        class="w-10 h-10 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full grid place-items-center cursor-pointer"
+        tabindex="0"
+        data-option="3">3</span
+      >
+    </div>
+    <div>
+      <div data-item="1" class="text-center lg:text-left">
+        <span
+          class="text-primary leading-none text-sm tracking-[2.362px] md:text-base md:tracking-[2.7px]"
+          >THE TERMINOLOGY…</span
+        >
+        <h2
+          class="font-bellefair uppercase leading-none text-2xl md:text-[40px] lg:text-[56px] mt-2 md:mt-4"
+        >
+          Launch Vehicle
+        </h2>
+        <p
+          class="font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 mt-4 md:mt-6 md:max-w-[458px] lg:max-w-[444px]"
+        >
+          A launch vehicle or carrier rocket is a rocket-propelled vehicle used
+          to carry a payload from Earth's surface to space, usually to Earth
+          orbit or beyond. Our WEB-X carrier rocket is the most powerful in
+          operation. Standing 150 metres tall, it's quite an awe-inspiring sight
+          on the launch pad!
+        </p>
+      </div>
+      <div data-item="2" class="hidden text-center lg:text-left">
+        <span
+          class="text-primary leading-none text-sm tracking-[2.362px] md:text-base md:tracking-[2.7px]"
+          >THE TERMINOLOGY…</span
+        >
+        <h2
+          class="font-bellefair uppercase leading-none text-2xl md:text-[40px] lg:text-[56px] mt-2 md:mt-4"
+        >
+          Spaceport
+        </h2>
+        <p
+          class="font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 mt-4 md:mt-6 md:max-w-[458px] lg:max-w-[444px]"
+        >
+          A spaceport or cosmodrome is a site for launching (or receiving)
+          spacecraft, by analogy to the seaport for ships or airport for
+          aircraft. Based in the famous Cape Canaveral, our spaceport is ideally
+          situated to take advantage of the Earth’s rotation for launch.
+        </p>
+      </div>
+      <div data-item="3" class="hidden text-center lg:text-left">
+        <span
+          class="text-primary leading-none text-sm tracking-[2.362px] md:text-base md:tracking-[2.7px]"
+          >THE TERMINOLOGY…</span
+        >
+        <h2
+          class="font-bellefair uppercase leading-none text-2xl md:text-[40px] lg:text-[56px] mt-2 md:mt-4"
+        >
+          space capsule
+        </h2>
+        <p
+          class="font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 mt-4 md:mt-6 md:max-w-[458px] lg:max-w-[444px]"
+        >
+          A space capsule is an often-crewed spacecraft that uses a blunt-body
+          reentry capsule to reenter the Earth's atmosphere without wings. Our
+          capsule is where you'll spend your time during the flight. It includes
+          a space gym, cinema, and plenty of other activities to keep you
+          entertained.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="hidden lg:block lg:ml-auto">
+    <Image
+      data-image="1"
+      src={vehicleImagePortrait}
+      alt="launch vehicle image"
+    />
+    <Image
+      data-image="2"
+      class="hidden"
+      src={spaceportImagePortrait}
+      alt="spaceport image"
+    />
+    <Image
+      data-image="3"
+      class="hidden"
+      src={spacecapsuleImagePortrait}
+      alt="space capsule image"
+    />
+  </div>
+</div>
+
+<script>
+  const options = document.querySelectorAll(".technology_options > span");
+  const images = document.querySelectorAll("[data-image]");
+  const dataItems = document.querySelectorAll("[data-item]");
+
+  options.forEach((option) => {
+    option.addEventListener("click", changeTechnology);
+    option.addEventListener("keydown", (e) => {
+      // @ts-ignore
+      if (e.key == "Enter") {
+        changeTechnology(e);
+      }
+    });
+  });
+
+  function changeTechnology(e: Event) {
+    // @ts-ignore
+    const selectedTechnology = e.target.getAttribute("data-option");
+
+    options.forEach((option) => option.classList.remove("active_technology"));
+    images.forEach((image) => image.classList.add("hidden"));
+    dataItems.forEach((dataItem) => dataItem.classList.add("hidden"));
+
+    document
+      .querySelectorAll(`[data-image='${selectedTechnology}']`)
+      .forEach((image) => image.classList.remove("hidden"));
+    document
+      .querySelector(`[data-item='${selectedTechnology}']`)
+      ?.classList.remove("hidden");
+
+    document
+      .querySelector(`[data-option='${selectedTechnology}']`)
+      ?.classList.add("active_technology");
+  }
+</script>

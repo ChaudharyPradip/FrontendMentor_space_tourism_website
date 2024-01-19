@@ -1,0 +1,235 @@
+---
+import { Image } from "astro:assets";
+import MoonImage from "@images/destination/image-moon.webp";
+import MarsImage from "@images/destination/image-mars.webp";
+import EuropaImage from "@images/destination/image-europa.webp";
+import TitanImage from "@images/destination/image-titan.webp";
+---
+
+<div
+  class="py-8 md:py-16 lg:py-24 flex flex-col items-center gap-6 md:gap-14 lg:gap-40 lg:flex-row"
+>
+  <div class="w-44 h-44 md:w-[300px] md:h-[300px] lg:w-[445px] lg:h-[445px]">
+    <Image data-image="moon" src={MoonImage} alt="Moon Image" />
+    <Image data-image="mars" class="hidden" src={MarsImage} alt="Mars Image" />
+    <Image
+      data-image="europa"
+      class="hidden"
+      src={EuropaImage}
+      alt="Europa Image"
+    />
+    <Image
+      data-image="titan"
+      class="hidden"
+      src={TitanImage}
+      alt="Titan Image"
+    />
+  </div>
+
+  <div class="lg:self-start">
+    <div
+      class="destination_options flex justify-center lg:justify-start gap-6 md:gap-9 uppercase leading-none text-sm tracking-[2.362px] md:text-base md:tracking-[2.7px]"
+    >
+      <span tabindex="0" data-option="moon" class="active_destination"
+        >Moon</span
+      ><span tabindex="0" data-option="mars">Mars</span><span
+        tabindex="0"
+        data-option="europa">Europa</span
+      ><span tabindex="0" data-option="titan">Titan</span>
+    </div>
+
+    <!-- Moon -->
+    <div data-item="moon" class="text-center lg:text-left mt-5 md:mt-8 lg:mt-9">
+      <div class="mb-8 md:mb-12 lg:mb-14">
+        <h2
+          class="font-bellefair uppercase leading-none text-6xl md:text-[5rem] lg:text-8xl"
+        >
+          Moon
+        </h2>
+        <p
+          class="mt-4 font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 md:max-w-[573px] lg:max-w-[444px]"
+        >
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+      </div>
+      <div aria-hidden="true" class="w-full h-px bg-[#383B4B]"></div>
+      <div
+        class="mt-8 md:mt-8 uppercase flex flex-col gap-8 md:flex-row md:justify-center md:gap-24 lg:justify-start"
+      >
+        <div class="grid gap-3">
+          <span
+            class="upppercase leading-none text-primary text-sm tracking-[2.362px]"
+            >AVG. DISTANCE</span
+          >
+          <p class="font-bellefair leading-none text-3xl">384,400 km</p>
+        </div>
+        <div class="grid gap-3">
+          <span
+            class="upppercase leading-none text-primary text-sm tracking-[2.362px]"
+            >Est. travel time</span
+          >
+          <p class="font-bellefair leading-none text-3xl">3 days</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mars -->
+    <div
+      data-item="mars"
+      class="hidden text-center lg:text-left mt-5 md:mt-8 lg:mt-9"
+    >
+      <div class="mb-8 md:mb-12 lg:mb-14">
+        <h2
+          class="font-bellefair uppercase leading-none text-6xl md:text-[5rem] lg:text-8xl"
+        >
+          Mars
+        </h2>
+        <p
+          class="mt-4 font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 md:max-w-[573px] lg:max-w-[444px]"
+        >
+          Don’t forget to pack your hiking boots. You’ll need them to tackle
+          Olympus Mons, the tallest planetary mountain in our solar system. It’s
+          two and a half times the size of Everest!
+        </p>
+      </div>
+      <div aria-hidden="true" class="w-full h-px bg-[#383B4B]"></div>
+      <div
+        class="mt-8 md:mt-8 uppercase flex flex-col gap-8 md:flex-row md:justify-center md:gap-24 lg:justify-start"
+      >
+        <div class="grid gap-3">
+          <span
+            class="upppercase leading-none text-primary text-sm tracking-[2.362px]"
+            >AVG. DISTANCE</span
+          >
+          <p class="font-bellefair leading-none text-3xl">225 MIL. km</p>
+        </div>
+        <div class="grid gap-3">
+          <span
+            class="upppercase leading-none text-primary text-sm tracking-[2.362px]"
+            >Est. travel time</span
+          >
+          <p class="font-bellefair leading-none text-3xl">9 months</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Europa -->
+    <div
+      data-item="europa"
+      class="hidden text-center lg:text-left mt-5 md:mt-8 lg:mt-9"
+    >
+      <div class="mb-8 md:mb-12 lg:mb-14">
+        <h2
+          class="font-bellefair uppercase leading-none text-6xl md:text-[5rem] lg:text-8xl"
+        >
+          Europa
+        </h2>
+        <p
+          class="mt-4 font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 md:max-w-[573px] lg:max-w-[444px]"
+        >
+          The smallest of the four Galilean moons orbiting Jupiter, Europa is a
+          winter lover’s dream. With an icy surface, it’s perfect for a bit of
+          ice skating, curling, hockey, or simple relaxation in your snug
+          wintery cabin.
+        </p>
+      </div>
+      <div aria-hidden="true" class="w-full h-px bg-[#383B4B]"></div>
+      <div
+        class="mt-8 md:mt-8 uppercase flex flex-col gap-8 md:flex-row md:justify-center md:gap-24 lg:justify-start"
+      >
+        <div class="grid gap-3">
+          <span
+            class="upppercase leading-none text-primary text-sm tracking-[2.362px]"
+            >AVG. DISTANCE</span
+          >
+          <p class="font-bellefair leading-none text-3xl">628 MIL. km</p>
+        </div>
+        <div class="grid gap-3">
+          <span
+            class="upppercase leading-none text-primary text-sm tracking-[2.362px]"
+            >Est. travel time</span
+          >
+          <p class="font-bellefair leading-none text-3xl">3 years</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Titan -->
+    <div
+      data-item="titan"
+      class="hidden text-center lg:text-left mt-5 md:mt-8 lg:mt-9"
+    >
+      <div class="mb-8 md:mb-12 lg:mb-14">
+        <h2
+          class="font-bellefair uppercase leading-none text-6xl md:text-[5rem] lg:text-8xl"
+        >
+          Titan
+        </h2>
+        <p
+          class="mt-4 font-barlow text-primary text-[15px] leading-[25px] md:text-base md:leading-7 lg:text-lg lg:leading-8 md:max-w-[573px] lg:max-w-[444px]"
+        >
+          The only moon known to have a dense atmosphere other than Earth, Titan
+          is a home away from home (just a few hundred degrees colder!). As a
+          bonus, you get striking views of the Rings of Saturn.
+        </p>
+      </div>
+      <div aria-hidden="true" class="w-full h-px bg-[#383B4B]"></div>
+      <div
+        class="mt-8 md:mt-8 uppercase flex flex-col gap-8 md:flex-row md:justify-center md:gap-24 lg:justify-start"
+      >
+        <div class="grid gap-3">
+          <span
+            class="upppercase leading-none text-primary text-sm tracking-[2.362px]"
+            >AVG. DISTANCE</span
+          >
+          <p class="font-bellefair leading-none text-3xl">1.6 BIL. km</p>
+        </div>
+        <div class="grid gap-3">
+          <span
+            class="upppercase leading-none text-primary text-sm tracking-[2.362px]"
+            >Est. travel time</span
+          >
+          <p class="font-bellefair leading-none text-3xl">7 years</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const options = document.querySelectorAll(".destination_options > span");
+  const images = document.querySelectorAll("[data-image]");
+  const dataItems = document.querySelectorAll("[data-item]");
+
+  options.forEach((option) => {
+    option.addEventListener("click", changeDestination);
+    option.addEventListener("keydown", (e) => {
+      // @ts-ignore
+      if (e.key == "Enter") {
+        changeDestination(e);
+      }
+    });
+  });
+
+  function changeDestination(e: Event) {
+    // @ts-ignore
+    const selectedDestination = e.target.getAttribute("data-option");
+
+    options.forEach((option) => option.classList.remove("active_destination"));
+    images.forEach((image) => image.classList.add("hidden"));
+    dataItems.forEach((dataItem) => dataItem.classList.add("hidden"));
+
+    document
+      .querySelector(`[data-image=${selectedDestination}]`)
+      ?.classList.remove("hidden");
+    document
+      .querySelector(`[data-item=${selectedDestination}]`)
+      ?.classList.remove("hidden");
+    document
+      .querySelector(`[data-option=${selectedDestination}]`)
+      ?.classList.add("active_destination");
+  }
+</script>
