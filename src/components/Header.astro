@@ -1,6 +1,6 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1);
+const currentPath = pathname.replaceAll("/", "");
 import { Image } from "astro:assets";
 import Logo from "@images/shared/logo.svg";
 import Hamburger from "@images/shared/icon-hamburger.svg";
