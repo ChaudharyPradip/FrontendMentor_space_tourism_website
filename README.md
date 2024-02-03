@@ -55,7 +55,8 @@ All the focusable elements should be wrapped with ```div```'s to add spacing etc
 
 The code I'm proud of:-
 This JavaScript code that I wrote which is used in almost all pages to quickly change the data being shown on the page.
-```const options = document.querySelectorAll(".technology_options > span");
+```javascript
+const options = document.querySelectorAll(".technology_options > span");
   const images = document.querySelectorAll("[data-image]");
   const dataItems = document.querySelectorAll("[data-item]");
 
